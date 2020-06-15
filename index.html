@@ -1,13 +1,27 @@
----
-layout: presentation
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href="assest/font awesome/all.css">
+    <link rel="stylesheet" href="assest/webfonts/fa-brands-400.eot.css">
+    <script src="assest/js/lib/jquery-3.5.1.min.js"></script>
+    <title>Todo List</title>
+</head>
+<body>
 
-{% for post in site.posts reversed %}
-	{% include slide.html %}
-	<div class="page-break"></div>
-{% endfor %}
-{% unless site.simple-slideshow %}
-{% if site.overview %}
-<section id="overview" class="step" {% for attr in site.overview-data %} data-{{attr[0]}}="{{attr[1]}}"{% endfor %}></section>
-{% endif %}
-{% endunless %}
+    <div id="container">
+        <h1>To-do List <i class="fa fa-plus"></i></h1>
+    <input type="text" placeholder="Add New Todo">
+    <ul>
+        <li><span><i class="fa fa-trash"></i></span> Buy bag of Milk</li>
+        <li><span><i class="fa fa-trash"></i></span> Buy Turtle</li>
+        <li><span><i class="fa fa-trash"></i></span> Movies</li>
+    </ul>
+    </div>
+    
+
+<script src="assest/js/todos.js"></script>    
+</body>
+</html>
